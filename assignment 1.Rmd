@@ -1,0 +1,22 @@
+---
+title: "Peer Assessment 1"
+author: Nada Hossam
+date: "`r format(Sys.time(), '%d %B %Y')`"
+output: 
+  html_document:
+    keep_md: true
+---
+
+
+```{r}
+library(leaflet)
+
+
+my_map <- leaflet() %>%
+        addTiles
+
+my_map <- my_map %>%
+        addMarkers(lat=51.452437, lng=-0.298503,
+                   popup="The Roebuck (Best view for drinking your pint in London)")
+my_map
+```
